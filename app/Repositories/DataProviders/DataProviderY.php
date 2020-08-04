@@ -13,7 +13,7 @@ class DataProviderY implements DataProviderInterface
     public function readData()
     {
 
-        $path   = storage_path() . "/app/public/DataProviders/DataProviderY.json";
+        $path   = storage_path() . "/DataProviders/DataProviderY.json";
         $json   = json_decode(file_get_contents($path), true)['users'];
 
         return $this->mapData($json);
